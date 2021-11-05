@@ -31,7 +31,6 @@ export default {
   name:'Navigation',
   components:{
     menuIcon
-
   }
 
 }
@@ -41,13 +40,13 @@ export default {
 
 .header{
   padding: 0 25px;
-  box-shadow: 0 4px 6px rgba($color: #000000, $alpha: 1.0);
+  box-shadow: 0 4px 6px rgba($color: #000000, $alpha: 0.2);
   z-index: 1;
 }
 
 .link{
   font-weight: 500;
-  padding: 10px 0;
+  padding: 0 10px;
   transition: .3 color ease;
   &:hover{
     color: #ccc;
@@ -63,12 +62,20 @@ nav{
   }
   .header{
     text-decoration: none;
+    font-size: 2.0em;
     }
   .nav-links{
     position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    }
+    @media (max-width: 768){
+    
+    .header{
+      display: flex;
+      justify-content: center;
+    }
     }
 }
 
