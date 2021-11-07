@@ -1,26 +1,25 @@
 <template>
 <header>
-  <nav class="container">
-    <div class="branding">
-      <router-link class="header" :to="{name : 'Home'}">ASTRONOUTS</router-link>
-    </div>
-    <div class="nav-links">
-      <ul>
-        <router-link class="link" to="#">ホーム</router-link>
-        <router-link class="link" to="#">会社概要</router-link>
-        <router-link class="link" to="#">お問い合わせ</router-link>
-      </ul>
-    </div>
-  </nav>
-<menuIcon class="menu-icon"/>
-<transition name='mobile-nav'>
-  <ul>
-    <router-link class="link" to="#">ホーム</router-link>
-    <router-link class="link" to="#">会社概要</router-link>
-    <router-link class="link" to="#">お問い合わせ</router-link>
-  </ul>
-
-</transition>
+    <nav class="container">
+      <div class="branding">
+        <router-link class="header" :to="{name : 'Home'}">ASTRONOUTS</router-link>
+      </div>
+      <div class="nav-links">
+        <ul v-show="!mobile">
+          <router-link class="link" to="#">ホーム</router-link>
+          <router-link class="link" to="#">会社概要</router-link>
+          <router-link class="link" to="#">お問い合わせ</router-link>
+        </ul>
+      </div>
+    </nav>
+  <menuIcon @click="toggleMobileNav" class="menu-icon" v-show="mobile"/>
+  <transition name="mobile-nav">
+    <ul v-show="mobileNav" class="mobile-nav">
+      <router-link class="link" to="#">ホーム</router-link>
+      <router-link class="link" to="#">会社概要</router-link>
+      <router-link class="link" to="#">お問い合わせ</router-link>
+    </ul>
+  </transition>
 </header>
   
 </template>
@@ -31,7 +30,38 @@ export default {
   name:'Navigation',
   components:{
     menuIcon
+  },
+  data(){
+    return{
+      mobile: null,
+      mobileNav: null,
+      windowWidth: null,
+    }
+  },
+
+  created(){
+    window.addEventListener("resize", this.checkScreen);
+    this.checkScreen();
+  },
+
+  methods:{
+    checkScreen(){
+      this.windowWidth = window.innerWidth;
+      if(this.windowWidth <= 750){
+        this.mobile = true; 
+        return;
+      }
+      this.mobile = false;
+      this.mobileNav = false;
+      return;
+    },
+    toggleMobileNav(){
+      this.mobileNav = !this.mobileNav;
+    }
+
+
   }
+
 
 }
 </script>
@@ -40,43 +70,79 @@ export default {
 
 .header{
   padding: 0 25px;
-  box-shadow: 0 4px 6px rgba($color: #000000, $alpha: 0.2);
-  z-index: 1;
-}
 
-.link{
-  font-weight: 500;
-  padding: 0 10px;
-  transition: .3 color ease;
-  &:hover{
-    color: #ccc;
+
+  .link{
+    font-weight: 500;
+    padding: 0 10px;
+    transition: .3 color ease;
+    &:hover{
+      color: #ccc;
+    }
   }
 }
-
-nav{
-  padding:25px 20px;
-  margin: 10px;
-  .branding{
+  nav{
     display: flex;
-    align-items: center;
-  }
-  .header{
-    text-decoration: none;
-    font-size: 2.0em;
-    }
-  .nav-links{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    }
-    @media (max-width: 768){
-    
-    .header{
+    padding:10px 20px;
+    margin: 10px;
+    .branding{
       display: flex;
-      justify-content: center;
+      align-items: center;
+      z-index: 0;
+    
+      .header{
+        text-decoration: none;
+        font-size: 2.0em;
+        }
     }
+    .nav-links{
+      position: relative;
+      display: flex;
+      flex:1;
+      align-items: center;
+      justify-content: flex-end;
+      }
+      ul{
+        margin-right: 30px;
+        .link{
+          margin-right: 30px;
+        }
+        .link:last-child{
+          margin:0;
+        }
+      }
+      @media (max-width: 768){
+      .header{
+        display: flex;
+        justify-content: center;
+      }
+      }
+
+  }
+  .menu-icon{
+    cursor: pointer;
+    position:absolute;
+    top:32px;
+    right: 25px;
+    height: 25px;
+    width: auto;
+  }
+
+  
+  .mobile-nav{
+    width: 70%;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    background-color: royalblue;
+
+    .link{
+      padding: 15px 0;
     }
-}
+
+  }
+
 
 </style>
