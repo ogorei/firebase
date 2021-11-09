@@ -2,7 +2,7 @@
 <header>
     <nav class="container">
       <div class="branding">
-        <router-link class="header" :to="{name : 'Home'}">ASTRONOUTS</router-link>
+        <router-link class="header" :to="{name : 'Home'}">Research & Technology</router-link>
       </div>
       <div class="nav-links">
         <ul v-show="!mobile">
@@ -131,16 +131,16 @@ export default {
 
   
   .mobile-nav{
-    width: 70%;
+    width: 60%;
     max-width: 250px;
     display: flex;
     flex-direction: column;
     position: fixed;
     height: 100%;
-    background-color: royalblue;
+    background-color:rgba(58, 55, 55, 0.349);
 
     .link{
-      padding: 15px 0;
+      padding: 15px;
     }
   }
   .mobile-nav-enter-active,

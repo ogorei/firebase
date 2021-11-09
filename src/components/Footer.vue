@@ -53,6 +53,7 @@ footer{
         gap: 0px;
       }
       .header{
+        text-align: center;
         font-size:16px;
         color: #fff;
         text-decoration: none;
