@@ -5,9 +5,9 @@
         <div class="col-1">
           <router-link class="header" :to="{name :'home'}">R&T</router-link>
           <ul>
-            <li>link 1 </li>
-            <li>link 1 </li>
-            <li>link 1 </li>
+            <li>ホーム</li>
+            <li>お問い合わせ</li>
+            <li>会社概要</li>
           </ul>
         </div>
       </div>
@@ -61,6 +61,7 @@ footer{
       ul{
         gap: 16px;
         list-style: none;
+        text-align: center;
       }
       .col-1{
         gap: 32px;
