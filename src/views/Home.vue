@@ -1,17 +1,18 @@
 <template>
-  <div class="container">
+  <div class="home-container">
     <div class="pr-desc">
-    <h1>{{welcomeScreen.title}}</h1>
-    <p>{{welcomeScreen.desc}}</p>
+      <h2>{{welcomeScreen.title}}</h2>
+      <p class="desc">{{welcomeScreen.desc}}</p>
     </div>
 
     <div class="right-image">
-      <img class="" src="../assets/logo.png" alt="">
+      <div class="rt-design">R&T</div>
     </div>
   </div>
 </template>
 
 <script>
+
 
 export default {
   name: "Home",
@@ -20,8 +21,8 @@ export default {
   data(){
     return{
       welcomeScreen: {
-        title: "R&T",
-        desc: "ITコンサルティング",
+        title: "ITコンサルティング",
+        desc: "ご要望を満たすためのソリューション提案やプロジェクトマネジメント支援を行い、ITを用いた業務改善のご支援を致します。",
         welcomeScreen: true, 
         photo: "rtimage"
       }
@@ -35,21 +36,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Orbitron:wght@600&family=Righteous&display=swap');
 
-.container{
+.home-container{
   display: flex;
   flex-direction: row;
-  flex-basis: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.pr-desc{
-  flex-direction: column;
-  flex-basis: 60%;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
+ 
+  .pr-desc{
+    text-align: center;
+    flex-direction: column;
+    flex-basis: 40%;
+    .desc{
+      font-size: 10px;
+    @media (min-width: 598px) {
+      font-size: 14px;
+    }
+    }
+  
+}
 }
 
 .right-image{
@@ -57,4 +64,11 @@ flex-direction: column;
 flex-basis: 40%;
 }
 
+.rt-design{
+  font-size: 100px;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  text-shadow: lawngreen;
+
+}
 </style>
