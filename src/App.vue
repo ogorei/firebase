@@ -2,8 +2,8 @@
   <div class="app-wrapper">
     <div class="app">
       <Navigation />
-      <Footer />
       <router-view />
+      <Footer />
     </div>
   </div>
 </template>
@@ -29,7 +29,7 @@ export default {
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Orbitron:wght@600&family=Righteous&display=swap');
 * {
   margin: 0;
   padding: 0;

@@ -4,7 +4,6 @@
       <h2>{{welcomeScreen.title}}</h2>
       <p class="desc">{{welcomeScreen.desc}}</p>
     </div>
-
     <div class="right-image">
       <div class="rt-design">R&T</div>
     </div>
@@ -26,7 +25,6 @@ export default {
         welcomeScreen: true, 
         photo: "rtimage"
       }
-
     }
   }
 
@@ -36,9 +34,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Orbitron:wght@600&family=Righteous&display=swap');
 
 .home-container{
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -48,7 +46,7 @@ export default {
   .pr-desc{
     text-align: center;
     flex-direction: column;
-    flex-basis: 40%;
+    flex-basis: 50%;
     .desc{
       font-size: 10px;
     @media (min-width: 598px) {

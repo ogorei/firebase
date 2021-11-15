@@ -1,9 +1,9 @@
 <template>
 <header>
     <nav class="container">
-      <div class="branding">
-        <router-link class="header" :to="{name : 'Home'}">Research & Technology</router-link>
-      </div>
+      <!-- <div class="branding">
+        <router-link class="header" :to="{name : 'Home'}">R&T</router-link>
+      </div> -->
       <div class="nav-links">
         <ul v-show="!mobile">
           <router-link class="link" to="#">ホーム</router-link>
@@ -71,8 +71,7 @@ export default {
 
 .header{
   padding: 0 25px;
-
-
+  font-family: 'Orbitron', sans-serif;;
   .link{
     font-weight: 500;
     padding: 0 10px;
