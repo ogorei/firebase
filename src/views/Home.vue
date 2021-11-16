@@ -1,21 +1,18 @@
 <template>
   <div class="home-container">
-    <div class="pr-desc">
-      <h2>{{welcomeScreen.title}}</h2>
-      <p class="desc">{{welcomeScreen.desc}}</p>
-    </div>
-    <div class="right-image">
-      <div class="rt-design">R&T</div>
-    </div>
+    <Hero :welcomeScreen="welcomeScreen"/>
+  
   </div>
 </template>
 
 <script>
-
+import Hero from '../components/Hero.vue';
 
 export default {
   name: "Home",
-  components: {},
+  components: {
+    Hero
+  },
 
   data(){
     return{
@@ -35,38 +32,11 @@ export default {
 
 <style lang="scss" scoped>
 
-.home-container{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
- 
-  .pr-desc{
-    text-align: center;
-    flex-direction: column;
-    flex-basis: 50%;
-    .desc{
-      font-size: 10px;
-    @media (min-width: 598px) {
-      font-size: 14px;
-    }
-    }
-  
-}
-}
-
-.right-image{
-flex-direction: column;
-flex-basis: 40%;
-}
-
-.rt-design{
-  font-size: 100px;
-  font-family: 'Orbitron', sans-serif;
-  text-align: center;
-  text-shadow: lawngreen;
+.card-wrapper{
+  font-weight: 300px;
+  font-size: 14px;
+  margin-bottom: 32px;
 
 }
+
 </style>
