@@ -59,23 +59,30 @@ export default {
   color: #fff;
 }
 
-.card-wrap{
-  position: relative;
-  padding: 80px 16px;
-  background-color: #f1f1f1;
-  @media (min-width: 500px) {
-    padding:100px 16px;
-  }
-  .cards{
-    display: grid;
-    gap:32px;
-    grid-template-columns: 1fr;
-    @media (min-width: 500px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (min-width: 700px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-}
+// .home-card-wrap{
+//   position: relative;
+//   padding: 80px 16px;
+//   background-color: #f1f1f1;
+//   grid-auto-rows: auto;
+//   gap: 32px;
+//     @media (min-width: 500px) {
+//       padding:100px 16px;
+//     }
+
+//   .cards{
+//     display: grid;
+//     gap:32px;
+//     grid-template-columns: 1fr 1fr 1fr;
+//     @media (min-width: 500px) {
+//       grid-template-columns: repeat(2, 1fr);
+//     }
+//     }
+//     .arrow{
+//       margin-left: 8px;
+//       width: 12px;
+//       path{
+//         fill: #000;
+//       }
+//     }
+// }
 </style>

@@ -9,6 +9,7 @@
           <router-link class="link" to="#">ホーム</router-link>
           <router-link class="link" to="#">会社概要</router-link>
           <router-link class="link" to="#">お問い合わせ</router-link>
+          <router-link class="link" to="#">ログイン</router-link>
         </ul>
       </div>
     </nav>
@@ -18,6 +19,7 @@
       <router-link class="link" to="#">ホーム</router-link>
       <router-link class="link" to="#">会社概要</router-link>
       <router-link class="link" to="#">お問い合わせ</router-link>
+      <router-link class="link" to="#">ログイン</router-link>
     </ul>
   </transition>
 </header>
