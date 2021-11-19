@@ -6,20 +6,20 @@
       </div> -->
       <div class="nav-links">
         <ul v-show="!mobile">
-          <router-link class="link" to="#">ホーム</router-link>
-          <router-link class="link" to="#">会社概要</router-link>
-          <router-link class="link" to="#">お問い合わせ</router-link>
-          <router-link class="link" to="#">ログイン</router-link>
+          <router-link class="link" to="home">ホーム</router-link>
+          <router-link class="link" to="about">会社概要</router-link>
+          <router-link class="link" to="contact">お問い合わせ</router-link>
+          <router-link class="link" to="login">ログイン</router-link>
         </ul>
       </div>
     </nav>
   <menuIcon @click="toggleMobileNav" class="menu-icon" v-show="mobile"/>
   <transition name="mobile-nav">
     <ul v-show="mobileNav" class="mobile-nav">
-      <router-link class="link" to="#">ホーム</router-link>
-      <router-link class="link" to="#">会社概要</router-link>
-      <router-link class="link" to="#">お問い合わせ</router-link>
-      <router-link class="link" to="#">ログイン</router-link>
+      <router-link class="link" to="home">ホーム</router-link>
+      <router-link class="link" to="about">会社概要</router-link>
+      <router-link class="link" to="contact">お問い合わせ</router-link>
+      <router-link class="link" to="login">ログイン</router-link>
     </ul>
   </transition>
 </header>
