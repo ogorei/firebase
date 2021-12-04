@@ -3,12 +3,11 @@
     <div v-for="(post, index) in sampleCard" :key="index">
       <div class="blog-card">
         <img :src="require(`../assets/blogCards/${post.blogCoverPhoto}.jpg`)" alt="">
-        <h6>{{post.title}}</h6>
+        <h5>{{post.title}}</h5>
         <p>{{post.content}}</p>
-        <router-link class="link" to="/">
+        <router-link class="routerBtn" to="/">
           view <Arrow class="arrow" />
         </router-link>
-
       </div>
     </div>
     
@@ -34,6 +33,7 @@ export default {
 
 .card-container{
   display: flex;
+  align-items: center;
   flex-basis: 100%;
   @media (max-width: 500px) {
   flex-wrap: wrap;  
@@ -58,9 +58,23 @@ export default {
       margin-left: 8px;
       width: 12px;
       path{
-        fill: #000;
+        fill: #fff;
       }
     }
+  h5, p{
+    text-align: center;
+    padding: 15px;
+  }
+  .routerBtn{
+    margin-left:30px;
+    margin-right:30px ;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+  }
+  
 }
 img{
   display: block;

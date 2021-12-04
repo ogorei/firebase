@@ -25,6 +25,7 @@ export default {
 
 .hero-container{
   margin-top: 10%;
+  margin-bottom:10%;
   width: 100%;
   display: flex;
   flex-direction: row;

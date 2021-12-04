@@ -59,6 +59,24 @@ export default {
   color: #fff;
 }
 
+button,
+.routerBtn{
+  transition: 500ms ease all;
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 12px 24px;
+  background-color:black;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  &:focus{
+    outline:#fff;
+  }
+  &:hover{
+    background-color: aquamarine;
+  }
+}
+
 // .home-card-wrap{
 //   position: relative;
 //   padding: 80px 16px;

@@ -2,10 +2,18 @@
   <div class="home-container">
     <Hero :welcomeScreen="welcomeScreen"/>
     <div class="home-card-wrap">
-      <h3>サービス一覧</h3>
+      <h2>サービス一覧</h2>
         <div class="cards">
           <Card :sampleCard="sampleCard"/>
         </div>
+    </div>
+    <div class="updates">
+      <div class="container">
+        <h2>Never miss a post</h2>
+        <router-link class="routerBtn" to="#">
+          register
+        </router-link>
+      </div>
     </div>
   
   </div>
@@ -64,14 +72,30 @@ export default {
   @media (max-width: 550px){
     padding: 50px 0;
   }
-  h3{
+  h2{
     text-align: center;
     font-weight: 300px;
-    font-size: 14px;
+    font-size: 30px;
     margin-bottom: 32px;
-  }
-     
+  }  
 }
+.updates{
+    .container{
+      padding: 300px 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media (max-width: 550px){
+        padding: 125px 25px;
+        flex-direction: column;
+      }
+    }
+    .routerBtn{
+      display: flex;
+      font-size: 14px;
+      text-decoration: none;
+    }
+  }
 
 
 </style>

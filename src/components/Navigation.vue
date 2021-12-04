@@ -6,7 +6,7 @@
       </div> -->
       <div class="nav-links">
         <ul v-show="!mobile">
-          <router-link class="link" to="home">ホーム</router-link>
+          <router-link class="link" to="/">ホーム</router-link>
           <router-link class="link" to="about">会社概要</router-link>
           <router-link class="link" to="contact">お問い合わせ</router-link>
           <router-link class="link" to="login">ログイン</router-link>
@@ -16,7 +16,7 @@
   <menuIcon @click="toggleMobileNav" class="menu-icon" v-show="mobile"/>
   <transition name="mobile-nav">
     <ul v-show="mobileNav" class="mobile-nav">
-      <router-link class="link" to="home">ホーム</router-link>
+      <router-link class="link" to="/">ホーム</router-link>
       <router-link class="link" to="about">会社概要</router-link>
       <router-link class="link" to="contact">お問い合わせ</router-link>
       <router-link class="link" to="login">ログイン</router-link>
@@ -132,16 +132,18 @@ export default {
 
   
   .mobile-nav{
-    width: 60%;
-    max-width: 250px;
+    width: 100%;
+    max-width: 260px;
     display: flex;
     flex-direction: column;
     position: fixed;
     height: 100%;
-    background-color:rgba(58, 55, 55, 0.349);
+    background-color:rgb(58, 55, 55);
+    z-index: 2;
 
     .link{
-      padding: 15px;
+      padding: 20px;
+      color: #fff;
     }
   }
   .mobile-nav-enter-active,
