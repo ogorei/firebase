@@ -40,17 +40,17 @@ export default {
       },
       sampleCard: [
         {
-        title:"one",
+        title:"ECサイト作成",
         content: "my card",
         blogCoverPhoto: 'stock-1'
         },
         {
-        title:"two",
-        content: "my card",
+        title:"LP作成",
+        content: "在籍デザイナーの制作実績集から発注検討をすることが可能です。 作りたい制作イメージと、近い実績があるデザイナーを選定可能になるので、 リスクなく安心して発注をすることができます。",
         blogCoverPhoto: 'stock-2'
         },
         {
-        title:"three",
+        title:"インフラ設計",
         content: "my card",
         blogCoverPhoto: 'stock-3'
         }

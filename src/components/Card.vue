@@ -3,10 +3,10 @@
     <div v-for="(post, index) in sampleCard" :key="index">
       <div class="blog-card">
         <img :src="require(`../assets/blogCards/${post.blogCoverPhoto}.jpg`)" alt="">
-        <h5>{{post.title}}</h5>
+        <h4>{{post.title}}</h4>
         <p>{{post.content}}</p>
         <router-link class="routerBtn" to="/">
-          view <Arrow class="arrow" />
+          詳細 <Arrow class="arrow" />
         </router-link>
       </div>
     </div>
@@ -61,9 +61,9 @@ export default {
         fill: #fff;
       }
     }
-  h5, p{
+  h4, p{
     text-align: center;
-    padding: 15px;
+    padding: 15px 30px;
   }
   .routerBtn{
     margin-left:30px;
