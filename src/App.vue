@@ -10,7 +10,7 @@
 
 <script>
 import Navigation from './components/Navigation.vue';
-import Footer from './components/Footer.vue'
+import Footer from './components/Footer.vue';
 export default {
   name: "app",
   components: {
@@ -18,9 +18,10 @@ export default {
     Footer
   },
   data() {
-    return {};
+    return {
+  
+    };
   },
-  created() {},
   mounted() {},
   methods: {},
   watch: {},
@@ -73,7 +74,7 @@ button,
     outline:#fff;
   }
   &:hover{
-    background-color: aquamarine;
+    background-color: #6C63FF;
   }
 }
 

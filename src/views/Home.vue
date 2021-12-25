@@ -40,19 +40,19 @@ export default {
       },
       sampleCard: [
         {
-        title:"ECサイト作成",
-        content: "my card",
-        blogCoverPhoto: 'stock-1'
+        title:"ECサイト運用",
+        content: "お客様のサイトにぴったりのSEO対策を提案いたします。",
+        blogCoverPhoto: 'undraw_Software_engineer_re_fyew'
         },
         {
         title:"LP作成",
-        content: "在籍デザイナーの制作実績集から発注検討をすることが可能です。 作りたい制作イメージと、近い実績があるデザイナーを選定可能になるので、 リスクなく安心して発注をすることができます。",
-        blogCoverPhoto: 'stock-2'
+        content: "作りたい制作イメージと、近い実績があるデザイナーを選定可能になるので、 リスクなく安心して発注をすることができます。",
+        blogCoverPhoto: 'undraw_Web_devices_re_m8sc'
         },
         {
-        title:"インフラ設計",
-        content: "my card",
-        blogCoverPhoto: 'stock-3'
+        title:"ITコンサルティング",
+        content: "システムの見直し、新システム導入の提案をさせていただきます。",
+        blogCoverPhoto: 'undraw_Interview_re_e5jn'
         }
 
       ]
@@ -94,6 +94,7 @@ export default {
       display: flex;
       font-size: 14px;
       text-decoration: none;
+      padding-bottom: 10px;
     }
   }
 

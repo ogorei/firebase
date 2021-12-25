@@ -2,28 +2,9 @@
 <div>
   <Hero :welcomeScreen="welcomeScreen" />
   <div class="container">
-    <table class="table">
-      <tr>
-        <td>理念</td>
-        <td>「新しい価値を共に創る」</td>
-      </tr>
-      <tr>
-        <td>設立</td>
-        <td>2021年8月17日</td>
-      </tr>
-      <tr>
-        <td>資本金</td>
-        <td>100,000円</td>
-      </tr>
-      <tr>
-        <td>取締役</td>
-        <td>遠藤拓也</td>
-      </tr>
-      
-
-    </table>
-    
+  <Tasks :tasks="tasks"/>
   </div>
+  <Zoom/>
 </div>
   
 </template>
@@ -31,10 +12,12 @@
 
 <script>
 import Hero from '../components/Hero.vue'
+import Tasks  from '../components/Tasks.vue'
 export default {
   name:'About',
   components:{
-    Hero
+    Hero,
+    Tasks
   },
   data() {
     return{
@@ -42,11 +25,27 @@ export default {
         title: "会社概要",
         welcomeScreen: true, 
         photo: "rtimage"
-      }
+      },
+      tasks:[]
 
     }
+  },
 
-  }
+  created() {
+    this.tasks = [
+      {
+        id:1,
+        title:'設立日',
+        desc: '2021年8月17日'
+      },
+      {
+        id:2,
+        title:'資本金',
+        desc: '100,000円'
+      }
+
+    ]
+  },
 
 }
 </script>
