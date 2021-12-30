@@ -1,18 +1,14 @@
 <template>
   <footer>
     <div class="container">
-      <div class="left">
-        <div class="col-1">
-          <router-link class="header" :to="{name :'home'}">R&T</router-link>
-          <ul>
-            <li>ホーム</li>
-            <li>お問い合わせ</li>
-            <li>会社概要</li>
-          </ul>
+         <!-- <div class="col-1">
+           <router-link class="link-scope" :to="{name :'about'}">会社概要</router-link>
         </div>
-      </div>
-      <div class="left"><p>Copyright</p></div>
+        <div class="col-1">
+          <router-link class="lin-scope" :to="{name :'contact'}">お問い合わせ</router-link>
+        </div> -->
     </div>
+    <div class="left"><p>R&T All Rights Reserved</p></div>
   </footer>
 </template>
 
@@ -25,73 +21,41 @@ export default {
 
 <style lang="scss" scoped>
 footer{
-  margin-top: auto;
-  padding: 30px 25px;
-  background-color:royalblue;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 40px 25px;
+  background-color: #6C63FF;
+ 
    .container{
      display: flex;
-     flex-direction: column;
-     gap:32px;
+     flex-direction: row;
      @media(min-width: 800px){
        flex-direction: row;
        gap: 0px;
      }
+     .header{
+       display: flex;
+       justify-content: flex-start;
+       
 
-     > div{
-       display: flex;
-       flex: 1;
      }
-     .left{
-       gap: 32px;
-       color: #fff;
+    //  .col-1{
+    //    width:200px;
+    //    display: flex;
+    //    flex-direction: column;
+    //  }
+
+     .left p{
        display: flex;
+       color: #fff;
        flex-direction: column;
-       align-items: center;
-       @media(min-width: 800px){
-        flex-direction: row;
-        align-items: initial;
-        gap: 0px;
-      }
-      .header{
-        text-align: center;
-        font-size:16px;
-        color: #fff;
-        text-decoration: none;
-      }
-      ul{
-        gap: 16px;
-        list-style: none;
-        text-align: center;
-      }
-      .col-1{
-        gap: 32px;
-        display: flex;
-        flex: 1;
-        @media(min-width: 800px){
-          gap: 0px;
-        }
-      }
-      .col-1{
-        flex-direction: column;
-        h2{
-          text-align: center;
-        }
-      }
-     }
-     .right{
-       gap: 32px;
-       color: #fff;
-       flex-direction:column;
-       @media(min-width: 800px){
-       align-items: center;
-       gap: 0px;
-     }
-     p{
-       margin-top: auto;
-     }
      }
 
 
+     
    }
 }
 

@@ -1,6 +1,7 @@
+
 <template>
   <div class="my-login">
-   <h1>Welcome to REINA website</h1>
+  <!-- in case is needed -->
   </div>
 </template>
 

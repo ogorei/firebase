@@ -7,12 +7,13 @@
           <Card :sampleCard="sampleCard"/>
         </div>
     </div>
-    <div class="updates">
+    <div class="updates circle">
       <div class="container">
-        <h2>Never miss a post</h2>
-        <router-link class="routerBtn" to="#">
-          register
-        </router-link>
+        <h2>経営 × IT</h2>
+        <p>環境変化における戦略・戦術を提案いたします</p>
+         <a href="mailto:Endooooooo7@gmail.com?subject=お問い合わせ&body=">
+          <button id="btnOutlook">お問い合わせ</button>
+        </a>
       </div>
     </div>
   
@@ -41,7 +42,7 @@ export default {
       sampleCard: [
         {
         title:"ECサイト運用",
-        content: "お客様のサイトにぴったりのSEO対策を提案いたします。",
+        content: "お客様のサイトにぴったりのSEO対策を提案いたします。 ",
         blogCoverPhoto: 'undraw_Software_engineer_re_fyew'
         },
         {

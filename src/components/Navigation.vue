@@ -8,18 +8,14 @@
         <ul v-show="!mobile">
           <router-link class="link" to="/">ホーム</router-link>
           <router-link class="link" to="about">会社概要</router-link>
-          <router-link class="link" to="contact">お問い合わせ</router-link>
-          <router-link class="link" to="login">ログイン</router-link>
         </ul>
       </div>
     </nav>
   <menuIcon @click="toggleMobileNav" class="menu-icon" v-show="mobile"/>
   <transition name="mobile-nav">
     <ul v-show="mobileNav" class="mobile-nav">
-      <router-link class="link" to="/">ホーム</router-link>
-      <router-link class="link" to="about">会社概要</router-link>
-      <router-link class="link" to="contact">お問い合わせ</router-link>
-      <router-link class="link" to="login">ログイン</router-link>
+      <router-link @click="closeMobileNav" class="link" to="/">ホーム</router-link>
+      <router-link @click="closeMobileNav"  class="link" to="about">会社概要</router-link>
     </ul>
   </transition>
 </header>
@@ -57,10 +53,15 @@ export default {
       this.mobileNav = false;
       return;
     },
-
     toggleMobileNav(){
       this.mobileNav = !this.mobileNav;
+    },
+    closeMobileNav(){
+     
+        console.log('here');
+    
     }
+
 
 
   }
@@ -79,6 +80,7 @@ export default {
     padding: 0 10px;
     transition: .3 color ease;
     &:hover{
+      background-color: burlywood;
       color: #ccc;
     }
   }
@@ -148,7 +150,7 @@ export default {
   }
   .mobile-nav-enter-active,
   .mobile-nav-leave-active{
-    transition: all 1s ease;
+    transition: all 0.1s ease-in-out;
   }
 
   .mobile-nav-enter{

@@ -5,7 +5,7 @@
       <p class="desc">{{welcomeScreen.desc}}</p>
     </div>
     <div class="right-image">
-      <div class="rt-design">R&T</div>
+      <img src="../assets/rt-logo.png" alt="">
     </div>
   </div>
 </template>
@@ -34,6 +34,7 @@ export default {
   align-items: center;
  
   .pr-desc{
+    font-size: 100px;
     text-align: center;
     flex-direction: column;
     flex-basis: 30%;
@@ -41,14 +42,27 @@ export default {
       flex-basis: 70%;
       font-size: 14px;
     }
+    h2{
+      font-size: 30px;
+      @media (max-width: 598px) {
+      font-size: 25px;
+    }
+    }
     .desc{
       font-size: 10px;
     }
   }
   .right-image{
-  flex-direction: column;
-  flex-basis: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-basis: 30%;
+  img{
+    width: 200px;
+    height: auto;
   }
+  }
+
 
   .rt-design{
     font-size: 100px;

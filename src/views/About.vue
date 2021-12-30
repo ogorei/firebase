@@ -4,7 +4,6 @@
   <div class="container">
   <Tasks :tasks="tasks"/>
   </div>
-  <Zoom/>
 </div>
   
 </template>
@@ -23,6 +22,7 @@ export default {
     return{
       welcomeScreen: {
         title: "会社概要",
+        desc:"",
         welcomeScreen: true, 
         photo: "rtimage"
       },
@@ -35,11 +35,16 @@ export default {
     this.tasks = [
       {
         id:1,
+        title:'取締役',
+        desc: '遠藤拓也'
+      },
+      {
+        id:2,
         title:'設立日',
         desc: '2021年8月17日'
       },
       {
-        id:2,
+        id:3,
         title:'資本金',
         desc: '100,000円'
       }
@@ -53,6 +58,7 @@ export default {
 <style lang="scss" scoped>
 .container{
   display:flex;
+  flex-basis: 100%;
   flex-direction: column;
   justify-items: center;
   align-items: center;
