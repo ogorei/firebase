@@ -1,9 +1,6 @@
 <template>
 <header>
     <nav class="container">
-      <!-- <div class="branding">
-        <router-link class="header" :to="{name : 'Home'}">R&T</router-link>
-      </div> -->
       <div class="nav-links">
         <ul v-show="!mobile">
           <router-link class="link" to="/">ホーム</router-link>
@@ -14,8 +11,8 @@
   <menuIcon @click="toggleMobileNav" class="menu-icon" v-show="mobile"/>
   <transition name="mobile-nav">
     <ul v-show="mobileNav" class="mobile-nav">
-      <router-link @click="closeMobileNav" class="link" to="/">ホーム</router-link>
-      <router-link @click="closeMobileNav"  class="link" to="about">会社概要</router-link>
+      <router-link class="link" to="/">ホーム</router-link>
+      <router-link class="link" to="about">会社概要</router-link>
     </ul>
   </transition>
 </header>
@@ -55,15 +52,7 @@ export default {
     },
     toggleMobileNav(){
       this.mobileNav = !this.mobileNav;
-    },
-    closeMobileNav(){
-     
-        console.log('here');
-    
     }
-
-
-
   }
 
 
