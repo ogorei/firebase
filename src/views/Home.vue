@@ -90,7 +90,11 @@ export default {
         padding: 125px 25px;
         flex-direction: column;
       }
-    }
+      p{
+        @media (max-width: 550px){
+        font-size:12px;
+      }
+      }
     .routerBtn{
       display: flex;
       font-size: 14px;
@@ -98,6 +102,6 @@ export default {
       padding-bottom: 10px;
     }
   }
-
+}
 
 </style>

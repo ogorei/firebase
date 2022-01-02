@@ -3,7 +3,7 @@
     <nav class="container">
       <div class="nav-links">
         <ul v-show="!mobile">
-          <router-link class="link" to="/">ホーム</router-link>
+          <router-link @click="hideMenu"  class="link" to="/">ホーム</router-link>
           <router-link class="link" to="about">会社概要</router-link>
         </ul>
       </div>
@@ -11,8 +11,12 @@
   <menuIcon @click="toggleMobileNav" class="menu-icon" v-show="mobile"/>
   <transition name="mobile-nav">
     <ul v-show="mobileNav" class="mobile-nav">
+      <li @click="hideMenu" class="link">
       <router-link class="link" to="/">ホーム</router-link>
+      </li>
+      <li @click="hideMenu" class="link">
       <router-link class="link" to="about">会社概要</router-link>
+      </li>
     </ul>
   </transition>
 </header>
@@ -28,8 +32,8 @@ export default {
   },
   data(){
     return{
-      mobile: null,
-      mobileNav: null,
+      mobile: false,
+      mobileNav: false,
       windowWidth: null,
     }
   },
@@ -51,11 +55,13 @@ export default {
       return;
     },
     toggleMobileNav(){
+      console.log('here toggle');
+      this.mobileNav = !this.mobileNav;
+    },
+    hideMenu(){
       this.mobileNav = !this.mobileNav;
     }
   }
-
-
 }
 </script>
 
@@ -70,11 +76,12 @@ export default {
     transition: .3 color ease;
     &:hover{
       background-color: burlywood;
-      color: #ccc;
+      color: #E3F906;
     }
   }
 }
   nav{
+    top: 0;
     display: flex;
     padding:10px 20px;
     margin: 10px;
@@ -89,6 +96,7 @@ export default {
         }
     }
     .nav-links{
+      top: 0;
       position: relative;
       display: flex;
       flex:1;
@@ -123,13 +131,14 @@ export default {
 
   
   .mobile-nav{
+    top: 0;
     width: 100%;
     max-width: 260px;
     display: flex;
     flex-direction: column;
     position: fixed;
     height: 100%;
-    background-color:rgb(58, 55, 55);
+    background-color:#6C63FF;;
     z-index: 2;
 
     .link{

@@ -34,6 +34,7 @@ export default {
   align-items: center;
  
   .pr-desc{
+    order: 1;
     font-size: 100px;
     text-align: center;
     flex-direction: column;
@@ -51,8 +52,12 @@ export default {
     .desc{
       font-size: 10px;
     }
+    @media (max-width: 598px) {
+      order: 2;
+    }
   }
   .right-image{
+  order: 2;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -61,6 +66,9 @@ export default {
     width: 200px;
     height: auto;
   }
+  @media (max-width: 598px) {
+      order: 1;
+    }
   }
 
 
