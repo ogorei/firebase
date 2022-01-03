@@ -71,6 +71,8 @@ export default {
 <style lang='scss' scoped>
 
 .header{
+  display: flex;
+  justify-content: center;
   padding: 0 25px;
   font-family: 'Orbitron', sans-serif;;
   .link{
