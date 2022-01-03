@@ -44,6 +44,9 @@ background-color: #F2F7FF;
 padding: 10px;
 margin:10px;
 border-bottom: 1px solid #6C63FF;
+@media (max-width: 598px) {
+    flex-direction: column;
+    }
   .inside{
     flex-direction: column;
     flex-basis: 60%;

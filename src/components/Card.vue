@@ -5,7 +5,7 @@
         <img :src="require(`../assets/undraw/${post.blogCoverPhoto}.png`)" alt="">
         <h4>{{post.title}}</h4>
         <p>{{post.content}}</p>
-        <router-link class="routerBtn" to="/">
+        <router-link class="routerBtn" :to="post.url">
           詳細 <Arrow class="arrow" />
         </router-link>
       </div>

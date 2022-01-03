@@ -1,7 +1,7 @@
 
 <template>
   <div class="my-login">
-  <!-- in case is needed -->
+  <!-- 必要になった場合 -->
   </div>
 </template>
 

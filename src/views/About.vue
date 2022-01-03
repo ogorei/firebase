@@ -22,7 +22,7 @@ export default {
     return{
       welcomeScreen: {
         title: "会社概要",
-        desc:"",
+        desc:"消費者価値観の変化に答えていく",
         welcomeScreen: true, 
         photo: "rtimage"
       },
@@ -47,6 +47,11 @@ export default {
         id:3,
         title:'資本金',
         desc: '100,000円'
+      },
+      {
+        id:4,
+        title:'事業内容',
+        desc: 'コンピュータのソフトウエア及びハードウエアの企画、研究、開発、設計、製造、販売、保守、リースに関するコンサルティング業務。'
       }
 
     ]
@@ -63,6 +68,7 @@ export default {
   justify-items: center;
   align-items: center;
   margin-bottom:50px;
+  
   table tr td{
     border: 1px solid #ccc;
     padding: 20px 250px;

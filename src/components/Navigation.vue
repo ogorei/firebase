@@ -4,6 +4,7 @@
       <div class="nav-links">
         <ul v-show="!mobile">
           <router-link @click="hideMenu"  class="link" to="/">ホーム</router-link>
+          <router-link class="link" to="services">サービス</router-link>
           <router-link class="link" to="about">会社概要</router-link>
         </ul>
       </div>
@@ -13,6 +14,9 @@
     <ul v-show="mobileNav" class="mobile-nav">
       <li @click="hideMenu" class="link">
       <router-link class="link" to="/">ホーム</router-link>
+      </li>
+      <li @click="hideMenu" class="link">
+      <router-link class="link" to="services">サービス</router-link>
       </li>
       <li @click="hideMenu" class="link">
       <router-link class="link" to="about">会社概要</router-link>
@@ -55,7 +59,6 @@ export default {
       return;
     },
     toggleMobileNav(){
-      console.log('here toggle');
       this.mobileNav = !this.mobileNav;
     },
     hideMenu(){
@@ -127,10 +130,13 @@ export default {
     right: 25px;
     height: 25px;
     width: auto;
+    
+    transform: rotateZ(180deg);
   }
 
   
   .mobile-nav{
+    justify-items: center;
     top: 0;
     width: 100%;
     max-width: 260px;

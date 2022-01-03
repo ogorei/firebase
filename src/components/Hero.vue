@@ -44,6 +44,7 @@ export default {
       font-size: 14px;
     }
     h2{
+      margin-top:25px;
       font-size: 30px;
       @media (max-width: 598px) {
       font-size: 25px;
@@ -63,11 +64,19 @@ export default {
   justify-content: center;
   flex-basis: 30%;
   img{
-    width: 200px;
+    margin-right:auto;
+    margin-left:auto;
+    width: 300px;
     height: auto;
   }
   @media (max-width: 598px) {
       order: 1;
+    img{
+    margin-right:auto;
+    margin-left:auto;
+    width: 200px;
+    height: auto;
+  }
     }
   }
 

@@ -43,17 +43,20 @@ export default {
         {
         title:"ECサイト運用",
         content: "お客様のサイトにぴったりのSEO対策を提案いたします。 ",
-        blogCoverPhoto: 'undraw_Software_engineer_re_fyew'
+        blogCoverPhoto: 'undraw_Software_engineer_re_fyew',
+        url:'services'
         },
         {
         title:"LP作成",
         content: "作りたい制作イメージと、近い実績があるデザイナーを選定可能になるので、 リスクなく安心して発注をすることができます。",
-        blogCoverPhoto: 'undraw_Web_devices_re_m8sc'
+        blogCoverPhoto: 'undraw_Web_devices_re_m8sc',
+        url:'services'
         },
         {
         title:"ITコンサルティング",
         content: "システムの見直し、新システム導入の提案をさせていただきます。",
-        blogCoverPhoto: 'undraw_Interview_re_e5jn'
+        blogCoverPhoto: 'undraw_Interview_re_e5jn',
+        url:'services'
         }
 
       ]
